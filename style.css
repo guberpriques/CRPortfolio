@@ -290,15 +290,15 @@ footer {
         padding-bottom: 3em;
     }
 /*CONTACT*/
-    .google-form {
-       max-width: 80vh;
-       justify-content: center;
-       overflow: auto;
-       overflow-y: scroll; /* Allows for vertical scrolling */
-        width: 100%;
-        height: 100%;
-         /* Adjust as needed */
-    } 
+.google-form {
+    display: block;
+    margin: 0 auto;
+    max-width: 80vh;
+    overflow: auto;
+    overflow-y: scroll; /* Allows for vertical scrolling */
+    width: 100%;
+    height: 100%;
+}
  
     .contact-form-container {
         /* Adjust these values as needed */
