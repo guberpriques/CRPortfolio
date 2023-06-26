@@ -1,3 +1,5 @@
+//Base lightbox code from WebDev Simplfied https://github.com/WebDevSimplified/Lightbox
+
 const lightbox = document.createElement('div')
 lightbox.id = 'lightbox'
 document.body.appendChild(lightbox)
