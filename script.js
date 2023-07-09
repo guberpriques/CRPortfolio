@@ -97,6 +97,19 @@ function showNextImage(e) {
   lightboxCaption.textContent = image.alt
   updateLightbox(image)
 }
+// Exit button creation
+const exitButton = document.createElement('button');
+exitButton.textContent = 'Exit';
+exitButton.style.position = 'absolute';
+exitButton.style.top = '10px'; // Position the exit button at the top
+exitButton.style.right = '10px'; // And to the right
+exitButton.style.fontSize = '1.5em'; // Increase button text size
+lightbox.appendChild(exitButton);
+
+function exitLightbox(e) {
+  e.stopPropagation();
+  lightbox.classList.remove('active');
+}
 
 // Update lightbox depending on the content (image, youtube, slide)
 function updateLightbox(image) {
@@ -118,7 +131,7 @@ function updateLightbox(image) {
     lightboxSlides.style.display = 'none'
   }
 }
-
+exitButton.addEventListener('click', exitLightbox);
 prevButton.addEventListener('click', showPrevImage)
 nextButton.addEventListener('click', showNextImage)
 
